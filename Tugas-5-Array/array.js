@@ -60,18 +60,36 @@ console.log("=============Soal Ketiga==========")
 function sum(num1, num2, step){
     var tampung = 0
     var array = []
-    if(num1 > num2){
-        for(i = num1; i>= num2; i-=step){
-            array.push(i)
-            tampung = tampung + i
+    if(num1 != null && num2 != null){
+        if(step !=null){
+            if(num1 > num2){
+                for(i = num1; i>= num2; i-=step){
+                    array.push(i)
+                    tampung = tampung + i
+                }
+            } else if(num2 > num1){
+                for(i = num1; i<= num2; i+=step){
+                    array.push(i)
+                    tampung = tampung + i
+                }
+            }
+        } else if( step = null){
+            if(num1 > num2){
+                for(i = num1; i>= num2; i--){
+                    array.push(i)
+                    tampung = tampung + i
+                }
+            } else if(num2 > num1){
+                for(i = num1; i<= num2; i++){
+                    array.push(i)
+                    tampung = tampung + i
+                }
+            }
         }
-    } else if(num2 > num1){
-        for(i = num1; i<= num2; i+=step){
-            array.push(i)
-            tampung = tampung + i
-        }
-    } else {
+    } else if(num1 == null || num2 == null){
         return 1
+    } else {
+        return 0
     }
     return array + " = " + tampung
 }
@@ -188,6 +206,7 @@ function dataHandling2(){
             break;
     }
     var kata = input[1].slice(0, 15)
+    var tanggal2 = tanggal.sort()
     return tanggal + "\n" + tanggal1 + "\n" + kata
 }
 
