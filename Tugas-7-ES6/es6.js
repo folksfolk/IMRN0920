@@ -1,19 +1,11 @@
 // Jawaban Soal Nomor 1
 
 console.log("==========Nomor 1==========")
-const golden = function goldenFunction(){
-    console.log("this is golden!!")
-  }
-   
-golden()
-
-console.log("===========Bentuk ES6===========")
-
 var golden = () => {
     return "This is golden!!"
 }
 
-golden()
+console.log(golden())
 console.log("\n\n")
 
 // Jawaban Soal Nomor 2
