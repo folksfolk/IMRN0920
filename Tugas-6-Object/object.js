@@ -49,9 +49,9 @@ console.log(arrayToObject(people2) )
 function shoppingTime(memberId, money){
     if(money < 50000){
         return "Mohon Maaf, Uang tidak cukup"
-    } else if(memberId == null && money !=null){
+    } else if(memberId === null && money !=null){
         return "Mohon Maaf, Toko X hanya berlaku untuk member saja"
-    } else if(memberId == null){
+    } else if(memberId === null){
         return "Mohon Maaf, Toko X hanya berlaku untuk member saja"
     }else if(memberId != null){
         for(i = 0; i < 5; i++){
@@ -91,14 +91,40 @@ console.log(shoppingTime());
 
 // Jawaban Soal Nomor 3
 
-function naikAngkot(arrPenumpang) {
-    rute = ['A', 'B', 'C', 'D', 'E', 'F'];
-    var array = []
-    var tampung = ""
-    for(i = 0; i <= arrPenumpang.length; i++){
-        
+function naikAngkot(arrPenumpang){
+    var rute = ["A","B","C","D","E", "F"]
+    var arrOutput = []
+    if (arrPenumpang.length <= 0){
+        return []
     }
-  }
+
+    for(var i = 0; i< arrPenumpang.length; i++){
+        var objOutput= {}
+        var asal = arrPenumpang [i][1]
+        var tujuan = arrPenumpang [i][2]
+
+        var indexAsal;
+        var indexTujuan;
+
+    for (var j = 0; j<rute.length; j++){
+        if(rute[j] == asal){
+            indexAsal = j
+        }else if (rute [j]== tujuan){
+            indexTujuan= j
+        }
+    }
+    var bayar = (indexTujuan- indexAsal) * 2000
+    
+    objOutput.penumpang = arrPenumpang[i][0]
+    objOutput.naikDari = asal
+    objOutput.tujuan = tujuan
+    objOutput.bayar = bayar
+
+    arrOutput.push(objOutput)
+    }
+    return arrOutput
+}
+
    
   //TEST CASE
   console.log(naikAngkot([['Dimitri', 'B', 'F'], ['Icha', 'A', 'B']]));
