@@ -5,22 +5,22 @@ var Score = class {
         this.email = email;
     }
 
-    set points(array){
-        var points = []
+    set __points(array){
+        this.points = []
         for(var i = 0; i < array.length; i++){
             points.push(array[i])
         }
     }
 
     average(array){
-        var nilai = 0
-        var pembagi = 0
+        nilai = 0
+        pembagi = 0
         for(var i = 0; i < array.length; i++){
             nilai = nilai + array[i]
             pembagi = pembagi + i
         }
 
-        var hasil = nilai / pembagi
+        hasil = nilai / pembagi
         return hasil
     }
 
