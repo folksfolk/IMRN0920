@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import Video from './Components/videoItem'
+import VideoItem from './Components/videoItem'
+import data from './data.json'
 
 export default function App() {
   return (
@@ -20,7 +21,13 @@ export default function App() {
             </View>
         </View>
         <View style={styles.body}>
-            <Video />
+            <FlatList 
+                data={data.items}
+                renderItem ={(video)=><VideoItem video={video.item} />}
+                keyExtractor={(item)=>item.id}
+                ItemSeparatorComponent={()=> <View style={{height:0.5, backgroundColor:'#E5E5E5'}}/>}
+            />
+
         </View>
         <View style={styles.tabBar}>
             <TouchableOpacity style={styles.tabItem}>
