@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, TextInput } from 'react-native';
 
 export default function LoginScreen() {
   return (
     <ScrollView>
         <View style={styles.container}>
-            <Image source={require('../Tugas13/assets/Kirikumi.png')}/>
+            <Image source={require('../Tugas13/assets/Kirikumi.png')} style={styles.icon}/>
             <Text style={styles.logintxt}>Login</Text>
             <View style={styles.forminput}>
                 <Text style={styles.formtxt}>Username</Text>
@@ -89,5 +89,8 @@ btntxt: {
 login: {
     marginTop: 20,
     alignItems: 'center'
+}, 
+icon: {
+    textAlign: 'center'
 }
 });

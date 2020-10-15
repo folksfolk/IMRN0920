@@ -1,94 +1,123 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, FlatList } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import VideoItem from './Components/videoItem'
-import data from './data.json'
+import { FontAwesome5 } from '@expo/vector-icons'
 
-export default function App() {
+export default function About() {
   return (
     <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.navBar}>
-            <Image source={require('../Tugas12/Images/yt-logo.png')} style={{width:98, height: 22}}/>
-            <View style={styles.rightNav}>
-                <TouchableOpacity>
-                    <Icon style={styles.navItem} name="search" size={25} />
-                </TouchableOpacity>
-
-                <TouchableOpacity>
-                    <Icon style={styles.navItem} name="account-circle" size={25} />
-                </TouchableOpacity>
+        <View style={styles.container}>
+            <Text style={styles.title}>About Me</Text>
+            <Image source={require('../Tugas13/assets/sam.jpg')} size={150} style={styles.icon}/>
+            <Text style={styles.name}>Muhammad Ardhani</Text>
+            <Text style={styles.job}>Mahasiswa</Text>
+            <View style={styles.box}>
+                <Text style={styles.intitle}>Portofolio</Text>
+                <View style={styles.inbox}>
+                    <View>
+                        <FontAwesome5 name="gitlab" size={40} color='#3EC6FF' style={styles.icon} />
+                        <Text style={styles.intext}>@folksfolk</Text>
+                    </View>
+                    <View>
+                        <FontAwesome5 name="github" size={40} color='#3EC6FF' style={styles.icon} />
+                        <Text style={styles.intext}>@folksfolk</Text>
+                    </View>
+                </View>
+            </View>
+            <View style={styles.box}>
+                <Text style={styles.intitle}>Contact</Text>
+                <View style={styles.inbox2}>
+                    <View style={styles.inbox2_hub}>
+                        <View>
+                            <FontAwesome5 name="facebook" size={40} color='#3EC6FF' style={styles.icon} />
+                        </View>
+                        <View style={styles.txtName}>
+                            <Text style={styles.intext}>@think.but.think</Text>
+                        </View>
+                    </View>
+                    <View style={styles.inbox2_hub}>
+                        <View>
+                            <FontAwesome5 name="instagram" size={40} color='#3EC6FF' style={styles.icon} />
+                        </View>
+                        <View style={styles.txtName}>
+                            <Text style={styles.intext}>@dhani_iihh</Text>
+                        </View>
+                    </View>
+                    <View style={styles.inbox2_hub}>
+                        <View>
+                            <FontAwesome5 name="twitter" size={40} color='#3EC6FF' style={styles.icon} />
+                        </View>
+                        <View style={styles.txtName}>
+                            <Text style={styles.intext}>@dhani_iihh</Text>
+                        </View>
+                    </View>
+                </View>
             </View>
         </View>
-        <View style={styles.body}>
-            <FlatList 
-                data={data.items}
-                renderItem ={(video)=><VideoItem video={video.item} />}
-                keyExtractor={(item)=>item.id}
-                ItemSeparatorComponent={()=> <View style={{height:0.5, backgroundColor:'#E5E5E5'}}/>}
-            />
-
-        </View>
-        <View style={styles.tabBar}>
-            <TouchableOpacity style={styles.tabItem}>
-                <Icon name="home" size={25} />
-                <Text style={styles.tabTitle}>Home</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.tabItem}>
-                <Icon name="whatshot" size={25} />
-                <Text style={styles.tabTitle}>Trending</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.tabItem}>
-                <Icon name="subcriptions" size={25} />
-                <Text style={styles.tabTitle}>Subcriptions</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.tabItem}>
-                <Icon name="folder" size={25} />
-                <Text style={styles.tabTitle}>Library</Text>
-            </TouchableOpacity>
-        </View>
-      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    marginTop: 64,
+    backgroundColor: '#8fa382'
   },
-  navBar: {
-      height: 55,
-      backgroundColor: 'white',
-      elevation: 3,
-      paddingHorizontal: 15,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between'
+  title: {
+      fontSize: 36,
+      fontWeight: 'bold',
+      color: '#003366',
+      textAlign: 'center'
   },
-  rightNav: {
-      flexDirection: 'row'
+  icon: {
+      textAlign: 'center'
   },
-  navItem: {
-      marginLeft: 25
+  name: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: '#003366',
+      textAlign: 'center'
   },
-  body: {
-      flex: 1
+  job: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: '#3ec6ff',
+      textAlign: 'center',
+      marginBottom: 7
   },
-  tabBar: {
-      backgroundColor: 'white',
-      height: 60,
-      borderTopWidth: 0.5,
-      borderColor: '#E5E5E5',
+  box: {
+      borderColor: 'blue',
+      borderRadius: 10,
+      borderBottomColor: '#000',
+      padding: 5,
+      backgroundColor: "#efefef",
+      marginBottom: 9
+  },
+  inbox: {
+      borderTopWidth: 2,
+      borderTopColor: '#003366',
       flexDirection: 'row',
       justifyContent: 'space-around'
   },
-  tabItem: {
-      alignItems: 'center',
-      justifyContent: 'center'
+  inbox2:{
+      borderTopWidth: 2,
+      borderTopColor: '#003366',
+      flexDirection: 'column',
+      justifyContent: 'space-around'
   },
-  tabTitle: {
-      fontSize: 11,
-      color: '#3c3c3c',
-      paddingTop: 4
+  inbox2_hub: {
+      height: 50,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginBottom: 2
+  },
+  intitle: {
+      fontSize: 18,
+      color: '#003366'
+  },
+  intext: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: '#003366',
+      textAlign: 'center'
   }
 });

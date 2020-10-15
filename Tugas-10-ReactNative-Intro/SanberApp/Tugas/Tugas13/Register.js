@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, TextInput } from 'react-native';
 
 export default function Register() {
   return (
@@ -21,6 +21,10 @@ export default function Register() {
             </View>
             <View style={styles.forminput}>
                 <Text style={styles.formtxt}>Password</Text>
+                <TextInput style={styles.input} secureTextEntry={true}/>
+            </View>
+            <View style={styles.forminput}>
+                <Text style={styles.formtxt}>Retype Password</Text>
                 <TextInput style={styles.input} secureTextEntry={true}/>
             </View>
             <View style={styles.register}>
