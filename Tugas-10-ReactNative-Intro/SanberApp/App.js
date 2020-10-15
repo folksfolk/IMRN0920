@@ -5,13 +5,15 @@ import VideoYoutube from './Tugas/Tugas12/App'
 import Login from './Tugas/Tugas13/LoginScreen'
 import Register from './Tugas/Tugas13/Register'
 import About from './Tugas/Tugas13/About'
+import Notes from './Tugas/Tugas14/App'
 
 export default function App() {
   return (
     // <VideoYoutube />
     // < Login />
     // < Register />
-    < About />
+    // < About />
+    < Notes />
     // <ScrollView>
     //   <View style={styles.container}>
     //     <Text>Open up App.js to start working on your app!</Text>
