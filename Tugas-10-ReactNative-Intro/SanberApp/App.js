@@ -6,6 +6,7 @@ import Login from './Tugas/Tugas13/LoginScreen'
 import Register from './Tugas/Tugas13/Register'
 import About from './Tugas/Tugas13/About'
 import Notes from './Tugas/Tugas14/App'
+import Skill from './Tugas/Tugas14/SkillScreen'
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
     // < Login />
     // < Register />
     // < About />
-    < Notes />
+    // < Notes />
+    < Skill />
     // <ScrollView>
     //   <View style={styles.container}>
     //     <Text>Open up App.js to start working on your app!</Text>
