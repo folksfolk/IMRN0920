@@ -65,7 +65,9 @@ const styles = StyleSheet.create({
     body: {
         flex: 1,
         padding: 5,
-        backgroundColor: '#8fa382'
+        borderRadius: 10,
+        backgroundColor: '#8fa382',
+        marginBottom: 9
     },
     descContainer: {
         flexDirection: 'row',

@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     },
     skillTitle: {
         fontSize: 24,
-        color: '#003366'
+        color: '#003366',
+        alignSelf: 'stretch'
     },
     skillDesc: {
         paddingHorizontal: 15,
@@ -43,12 +44,14 @@ const styles = StyleSheet.create({
     skillCategory: {
         fontSize: 16,
         paddingTop: 4,
-        color: '#3EC6FF'
+        color: '#3EC6FF',
+        alignSelf: 'stretch'
     },
     skillPercent: {
         fontSize: 48,
         paddingTop: 4,
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        alignSelf: 'center'
     },
     note: {
         position: 'absolute',
