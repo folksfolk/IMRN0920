@@ -8,28 +8,34 @@ import About from './Tugas/Tugas13/About'
 import Notes from './Tugas/Tugas14/App'
 import Skill from './Tugas/Tugas14/SkillScreen'
 
-export default function App() {
-  return (
-    // <VideoYoutube />
-    // < Login />
-    // < Register />
-    // < About />
-    // < Notes />
-    < Skill />
-    // <ScrollView>
-    //   <View style={styles.container}>
-    //     <Text>Open up App.js to start working on your app!</Text>
-    //     <StatusBar style="auto" />
-    //   </View>
-    // </ScrollView>
-  );
-}
+import {AppRegistry} from 'react-native';
+import App from './Tugas/Tugas15/index';
+import {name as appName} from './app.json';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+AppRegistry.registerComponent(appName, () => App);
+
+// export default function App() {
+//   return (
+//     // <VideoYoutube />
+//     // < Login />
+//     // < Register />
+//     // < About />
+//     // < Notes />
+//     < Skill />
+//     // <ScrollView>
+//     //   <View style={styles.container}>
+//     //     <Text>Open up App.js to start working on your app!</Text>
+//     //     <StatusBar style="auto" />
+//     //   </View>
+//     // </ScrollView>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });

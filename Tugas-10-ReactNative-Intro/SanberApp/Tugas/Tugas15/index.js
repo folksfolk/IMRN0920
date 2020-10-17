@@ -7,27 +7,45 @@ import { Skill } from '../Tugas14/SkillScreen'
 import { Add } from './addScreen'
 import { Project } from './ProjectScreen'
 import { LogIn } from '../Tugas13/LoginScreen'
-import About from "../Tugas13/About";
+import { About } from "../Tugas13/About";
 
 const AuthStack = createStackNavigator()
 const Tabs = createBottomTabNavigator()
 const Drawer = createDrawerNavigation()
 
-export default() => {
-  <NavigationContainer>
-      <Tabs.Navigator>
-          <Tabs.Screen name="Skill" component={Skill} />
-          <Tabs.Screen name="Project" component={Project} />
-          <Tabs.Screen name="Add" component={Add} />
-      </Tabs.Navigator>
-      <AuthStack.Navigator>
-          <AuthStack.Screen
-          name="Login"
-          component={LogIn}
-          options={{ title: "Log In"}} />
-      </AuthStack.Navigator>
-      <Drawer.Navigator initialRouteName="Home">
-          <Drawer.Screen name="About" component={About} />
-      </Drawer.Navigator>
-  </NavigationContainer>
+const index = () => {
+    return(
+        <NavigationContainer>
+            <AuthStack.Navigator>
+                <AuthStack.Screen
+                name="Login"
+                component={LogIn}
+                options={{ title: "Log In"}} />
+            </AuthStack.Navigator>
+        </NavigationContainer>
+    )
 }
+
+const MainApp = () => {
+    return(
+        <NavigationContainer>
+            <Tabs.Navigator>
+                <Tabs.Screen name="Skill" component={Skill} />
+                <Tabs.Screen name="Project" component={Project} />
+                <Tabs.Screen name="Add" component={Add} />
+            </Tabs.Navigator>
+        </NavigationContainer>
+    )
+}
+
+const MyDrawer = () => {
+    return(
+        <NavigationContainer>
+            <Drawer.Navigator initialRouteName="Home">
+                <Drawer.Screen name="About" component={About} />
+            </Drawer.Navigator>
+        </NavigationContainer>
+    )
+}
+
+export default index
