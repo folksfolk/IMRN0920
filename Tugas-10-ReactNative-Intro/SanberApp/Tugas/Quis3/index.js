@@ -3,11 +3,9 @@ import { createDrawerNavigation } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Skill } from './LoginScreen'
-import { Add } from './addScreen'
-import { Project } from './ProjectScreen'
-import { LogIn } from './LoginScreen'
-import { About } from "./About";
+import { Home } from './component/HomeScreen'
+import { LogIn } from './component/Login'
+import { Register } from './component/Register'
 
 const AuthStack = createStackNavigator()
 const Tabs = createBottomTabNavigator()
@@ -30,9 +28,9 @@ const MainApp = () => {
     return(
         <NavigationContainer>
             <Tabs.Navigator>
-                <Tabs.Screen name="Skill" component={Skill} />
-                <Tabs.Screen name="Project" component={Project} />
-                <Tabs.Screen name="Add" component={Add} />
+                <Tabs.Screen name="Home" component={Home} />
+                <Tabs.Screen name="Register" component={Register} />
+                <Tabs.Screen name="Login" component={LogIn} />
             </Tabs.Navigator>
         </NavigationContainer>
     )
@@ -42,7 +40,9 @@ const MyDrawer = () => {
     return(
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
-                <Drawer.Screen name="About" component={About} />
+                <Drawer.Screen name="Home" component={Home} />
+                <Drawer.Screen name="Register" component={Register} />
+                <Drawer.Screen name="Login" component={LogIn} />
             </Drawer.Navigator>
         </NavigationContainer>
     )

@@ -1,24 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import VideoYoutube from './Tugas/Tugas12/App'
 import Login from './Tugas/Tugas13/LoginScreen'
 import Register from './Tugas/Tugas13/Register'
 import About from './Tugas/Tugas13/About'
-import Notes from './Tugas/Tugas14/App'
 import Skill from './Tugas/Tugas14/SkillScreen'
-
-import {AppRegistry} from 'react-native';
-import App from './Tugas/Tugas15/index';
-import {name as appName} from './app.json';
-
-AppRegistry.registerComponent(appName, () => App);
 
 // export default function App() {
 //   return (
 //     // <VideoYoutube />
 //     // < Login />
-//     // < Register />
+        < Register />
 //     // < About />
 //     // < Notes />
 //     < Skill />
