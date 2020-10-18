@@ -3,10 +3,10 @@ import { createDrawerNavigation } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Home } from './component/HomeScreen'
-import { LogIn } from './component/Login'
-import { Register } from './component/Register'
-import { Splash } from './component/Splash'
+import Home from './component/HomeScreen'
+import LogIn from './component/Login'
+import Register from './component/Register'
+import Splash from './component/Splash'
 
 const AuthStack = createStackNavigator()
 const Tabs = createBottomTabNavigator()

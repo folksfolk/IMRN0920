@@ -5,12 +5,14 @@ import Login from './Tugas/Tugas13/LoginScreen'
 import Register from './Tugas/Tugas13/Register'
 import About from './Tugas/Tugas13/About'
 import Skill from './Tugas/Tugas14/SkillScreen'
+import Quis from './Tugas/Quis3/index'
 
-// export default function App() {
-//   return (
+export default function App() {
+  return (
 //     // <VideoYoutube />
 //     // < Login />
-        < Register />
+        // < Register />
+        < Quis />
 //     // < About />
 //     // < Notes />
 //     < Skill />
@@ -20,8 +22,8 @@ import Skill from './Tugas/Tugas14/SkillScreen'
 //     //     <StatusBar style="auto" />
 //     //   </View>
 //     // </ScrollView>
-//   );
-// }
+  );
+}
 
 // const styles = StyleSheet.create({
 //   container: {
