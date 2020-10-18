@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Home } from './component/HomeScreen'
 import { LogIn } from './component/Login'
 import { Register } from './component/Register'
+import { Splash } from './component/Splash'
 
 const AuthStack = createStackNavigator()
 const Tabs = createBottomTabNavigator()
@@ -14,11 +15,10 @@ const Drawer = createDrawerNavigation()
 const index = () => {
     return(
         <NavigationContainer>
-            <AuthStack.Navigator>
-                <AuthStack.Screen
-                name="Login"
-                component={LogIn}
-                options={{ title: "Log In"}} />
+            <AuthStack.Navigator initialRouteName="Splash">
+                <AuthStack.Screen name="Home" component={MainApp} />
+                <AuthStack.Screen name="Drawer" component={MyDrawer} />
+                <AuthStack.Screen name="Splash" component={Splash} />
             </AuthStack.Navigator>
         </NavigationContainer>
     )
